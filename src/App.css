@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.homepage {
+  background-image: url('./assets/download (3).jpeg'); /* Path to your background image */
+  background-size: cover; /* Makes sure the image covers the whole page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Ensure text is visible on the background */
+}
+
+.homepage h1 {
+  font-size: 3rem;
+}
+
+.homepage p {
+  font-size: 1.5rem;
+}

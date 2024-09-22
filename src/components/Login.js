@@ -9,6 +9,10 @@ function Login() {
         <Container fluid = "md">
             <Row className="justify-content-md-center">
                 <Col>
+                    <h1>
+                        <b>Login</b>
+                    </h1>
+
                     <Form>      
                     {/* Username */}
                         <Form.Group className="mb-3" controlId="formUsername">
@@ -24,6 +28,13 @@ function Login() {
                                 id="inputPassword5"
                             />
                         </Form.Group>
+
+                    {/* Login Button */}
+                    <div className="d-grid my-4">
+                            <Button variant="danger" className='rounded-pill' type='submit'>
+                                Login
+                            </Button>
+                    </div>
                     </Form>
                 </Col>
             </Row>

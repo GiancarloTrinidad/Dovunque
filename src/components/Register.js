@@ -8,11 +8,10 @@ import Login from './Login.js';
 
 function Register() {
     return (   
-        <div className="d-flex align-items-center justify-content-center vh-100">
-
-        
+        <div className="col d-flex justify-content-center">
+  
         <Container fluid>
-        <Card style={{width:'80%', borderRadius: '25px'}}>
+        <Card className="center" style={{borderRadius: '25px'}}>
         <Card.Body>
             <Row className="justify-content-md-center">
                 <Col>

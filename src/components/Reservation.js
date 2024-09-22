@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 function Reservation () {
     return (
 
-        //pakilagay nalang yung <Navbar/> dito
+        //Di pala dito yung Navbar, mb
 
         <div className="Reservation">
     <Card style={{ width: '20rem' ,backgroundColor: '#5CA921', color: 'white'}}>

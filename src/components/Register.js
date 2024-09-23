@@ -4,7 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Login from './Login.js';
+import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom'
 
 function Register() {
     return (   
@@ -68,7 +69,8 @@ function Register() {
 
                     {/* Link to Login */}
                     <center>
-                        <p>Already have an account? Login here </p>
+                        Already have an account?
+                        <Nav.Link as = {Link} to="/login"><b>Login Here</b></Nav.Link>
                     </center>
                 </Col>
 

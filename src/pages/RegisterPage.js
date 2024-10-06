@@ -16,9 +16,7 @@ function Register() {
         <Card.Body>
             <Row className="justify-content-md-center">
                 <Col>
-                <center>
-                <h1><b>Register</b></h1>
-                </center>
+                <h1 className="text-center"><b>Register</b></h1>
                     
                     <Form>      
                     {/* Username */}

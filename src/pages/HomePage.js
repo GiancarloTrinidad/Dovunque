@@ -1,12 +1,8 @@
-// src/components/Home.js
-
 import React from 'react';
-
-
 
 const Home = () => {
     const backgroundStyle = {
-        backgroundImage: "assets/download (3).jpeg",
+        backgroundImage: "../assets/download (3).jpeg",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

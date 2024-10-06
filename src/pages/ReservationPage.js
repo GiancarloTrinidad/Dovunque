@@ -1,4 +1,4 @@
-import './DovunqueStyle.css';
+import '../components/DovunqueStyle.css';
 import React, { useState, useEffect } from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import Form from 'react-bootstrap/Form';
@@ -7,11 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
-
 function Reservation () {
     return (
-
-        //Di pala dito yung Navbar, mb
 
         <div className="Reservation">
     <Card style={{ width: '20rem' ,backgroundColor: '#5CA921', color: 'white'}}>

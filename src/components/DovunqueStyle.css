@@ -1,6 +1,6 @@
 .Reservation {
     text-align: center;
-    background-image: url('./images/11-21\ AmoreMain.jpg');
+    background-image: url('../assets/reservation_bg.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     min-height: 100vh;

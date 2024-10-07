@@ -1,4 +1,4 @@
-import '../components/DovunqueStyle.css';
+import '../styles/DovunqueStyle.css';
 import React, { useState, useEffect } from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import Form from 'react-bootstrap/Form';

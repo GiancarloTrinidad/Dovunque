@@ -7,10 +7,12 @@
     left: 0;
     width: 100%; 
     height: 100%;
+    overflow-y: scroll;
 }
 
 .RegisterCard {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
 }

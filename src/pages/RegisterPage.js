@@ -1,5 +1,5 @@
 import '../styles/AuthStyle.css'
-import MainNavbar from '../components/MainNavbar'
+import MainNavbar from '../components/MainNavbar';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -17,27 +17,27 @@ function Register() {
                 <Card className="RegisterCard" fluid>
                     <Row className='g-0'>
                         <Col md='6'>
-                            <Card.Body className='d-flex flex-column'>
+                            <Card.Body className='d-flex flex-column px-5'>
                             <h1 className="text-center py-5"><b>Create Account</b></h1>
                             
                             <Form>      
                             {/* Username */}
                                 <Form.Group className="mb-3" controlId="formUsername">
-                                    <Form.Label>Username</Form.Label>
+                                    <Form.Label><strong>Username</strong></Form.Label>
                                     <Form.Control type="text" />
                                 </Form.Group>
                             
 
                             {/* Email */}
                                 <Form.Group className="mb-3" controlId="formEmail">
-                                    <Form.Label>Email address</Form.Label>
+                                    <Form.Label><strong>Email address</strong></Form.Label>
                                     <Form.Control type="email" placeholder="name@example.com" />
                                 </Form.Group>
                             
 
                             {/* Password */}
                                 <Form.Group className="mb-3" controlId="formPassword">
-                                    <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+                                    <Form.Label htmlFor="inputPassword5"><strong>Password</strong></Form.Label>
                                     <Form.Control
                                         type="password"
                                         id="inputPassword5"
@@ -51,7 +51,7 @@ function Register() {
 
                             {/* Re-enter Password */}
                                 <Form.Group className="mb-3" controlId="formPassword2">
-                                    <Form.Label htmlFor="inputPassword5">Re-enter Password</Form.Label>
+                                    <Form.Label htmlFor="inputPassword5"><strong>Re-enter Password</strong></Form.Label>
                                     <Form.Control
                                         type="password"
                                         id="inputPassword5"
@@ -79,7 +79,8 @@ function Register() {
                             <Card.Img src={require('../assets/pizzeria.jpg')} 
                             alt='register image' 
                             height={750} 
-                            className='object-fit-cover rounded-end w-100' fluid/>
+                            className='object-fit-cover rounded-end w-100' 
+                            fluid/>
                         </Col>
                     </Row>
                 </Card>

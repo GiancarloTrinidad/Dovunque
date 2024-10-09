@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer'
 
 const Home = () => {
     const backgroundStyle = {
@@ -125,9 +126,7 @@ const Home = () => {
        
                 </div>
             </main>
-            <footer className="text-center bg-danger text-white py-3">
-                <p>&copy; 2024 Dovunque Italian Restaurant | Where Italy Meets Home</p>
-            </footer>
+            <Footer />
         </div>
     );
 };

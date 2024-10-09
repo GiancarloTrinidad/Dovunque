@@ -21,7 +21,7 @@ function Login() {
                             <Card.Body>
                                 <h1 className="text-center mt-4 mb-3"><b>Login</b></h1> 
 
-                                <Form>      
+                                <Form className='px-4'>      
                                 {/* Username */}
                                     <Form.Group className="mb-3" controlId="formUsername">
                                         <Form.Label><b>Username</b></Form.Label>
@@ -48,7 +48,7 @@ function Login() {
                                     Login
                                     </Button>
 
-                                    <p className='pt-4'>New user?
+                                    <p className='pt-4 pb-2'>New user?
                                         <Nav.Link as = {Link} to="/register">
                                         <strong>Create an account</strong>
                                         </Nav.Link>

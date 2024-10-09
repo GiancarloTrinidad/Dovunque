@@ -7,7 +7,6 @@ import Login from './pages/LoginPage';
 import Reservation from './pages/ReservationPage';
 import Payment from './pages/PaymentPage'
 import MainNavbar from './components/MainNavbar';
-
 import { Route, Routes } from 'react-router-dom';
 
 function App() {

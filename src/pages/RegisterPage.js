@@ -18,27 +18,28 @@ function Register() {
                     <Row className='g-0'>
                         <Col md='6'>
                             <Card.Body className='d-flex flex-column px-5'>
-                            <h1 className="text-center py-5"><b>Create Account</b></h1>
+                            <h1 className="text-center py-5 fw-bold">Create Account</h1>
                             
                             <Form>      
                             {/* Username */}
                                 <Form.Group className="mb-3" controlId="formUsername">
-                                    <Form.Label><strong>Username</strong></Form.Label>
-                                    <Form.Control type="text" />
+                                    <Form.Label className="fw-semibold">Username</Form.Label>
+                                    <Form.Control required type="text" />
                                 </Form.Group>
                             
 
                             {/* Email */}
                                 <Form.Group className="mb-3" controlId="formEmail">
-                                    <Form.Label><strong>Email address</strong></Form.Label>
-                                    <Form.Control type="email" placeholder="name@example.com" />
+                                    <Form.Label className="fw-semibold">Email address</Form.Label>
+                                    <Form.Control required type="email" placeholder="name@example.com" />
                                 </Form.Group>
                             
 
                             {/* Password */}
                                 <Form.Group className="mb-3" controlId="formPassword">
-                                    <Form.Label htmlFor="inputPassword5"><strong>Password</strong></Form.Label>
+                                    <Form.Label htmlFor="inputPassword5" className="fw-semibold">Password</Form.Label>
                                     <Form.Control
+                                        required
                                         type="password"
                                         id="inputPassword5"
                                         aria-describedby="passwordHelpBlock"
@@ -51,8 +52,9 @@ function Register() {
 
                             {/* Re-enter Password */}
                                 <Form.Group className="mb-3" controlId="formPassword2">
-                                    <Form.Label htmlFor="inputPassword5"><strong>Re-enter Password</strong></Form.Label>
+                                    <Form.Label htmlFor="inputPassword5" className="fw-semibold">Re-enter Password</Form.Label>
                                     <Form.Control
+                                        required
                                         type="password"
                                         id="inputPassword5"
                                     />

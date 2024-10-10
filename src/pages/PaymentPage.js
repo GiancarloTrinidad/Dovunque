@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import PaymentModal from '../components/PaymentModal.js';
+import CardPaymentModal from '../components/CardPaymentModal.js';
 
 function Payment() {
     const [modalShow, setModalShow] = useState(false);
@@ -13,7 +13,7 @@ function Payment() {
         <>
             <Container>
                 <Row className='mt-5 pt-3'>   
-                    <h1 className='display-4'><strong>Choose a payment method</strong></h1>
+                    <h1 className='display-4'>Choose a payment method</h1>
                 </Row>
                 <Row xs={1} md={2} className="g-4">
                     <Col>
@@ -33,7 +33,7 @@ function Payment() {
                 </Row>
             </Container>
 
-            <PaymentModal
+            <CardPaymentModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />

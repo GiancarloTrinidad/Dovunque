@@ -19,19 +19,20 @@ function Login() {
                     <Col xs={8}>
                         <Card className='my-5'>
                             <Card.Body>
-                                <h1 className="text-center mt-4 mb-3"><b>Login</b></h1> 
+                                <h1 className="text-center mt-4 mb-3 fw-bold">Login</h1> 
 
                                 <Form className='px-4'>      
                                 {/* Username */}
                                     <Form.Group className="mb-3" controlId="formUsername">
-                                        <Form.Label><b>Username</b></Form.Label>
-                                        <Form.Control type="text" placeholder="Enter your username"/>
+                                        <Form.Label className="fw-bold">Username</Form.Label>
+                                        <Form.Control required type="text" placeholder="Enter your username"/>
                                     </Form.Group>
 
                                 {/* Password */}
                                     <Form.Group className="mb-3" controlId="formPassword">
-                                        <Form.Label htmlFor="inputPassword5"><b>Password</b></Form.Label>
+                                        <Form.Label htmlFor="inputPassword5" className="fw-bold">Password</Form.Label>
                                         <Form.Control
+                                            required
                                             type="password"
                                             id="inputPassword5"
                                             placeholder="Enter your password"

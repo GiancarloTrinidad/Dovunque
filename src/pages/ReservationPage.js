@@ -16,23 +16,23 @@ function Reservation () {
             <Form style={{padding: '20px'}}>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control as="textarea" rows={1} placeholder="Name" />
+                    <Form.Control type="textarea" rows={1} placeholder="Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control as="textarea" rows={1} placeholder="Phone Number" />
+                    <Form.Control type="textarea" rows={1} placeholder="Phone Number" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control as="textarea" rows={1} placeholder="Number of Guests" />
+                    <Form.Control type="textarea" rows={1} placeholder="Number of Guests" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control as="textarea" rows={1} placeholder="Date" />
+                    <Form.Control type="textarea" rows={1} placeholder="Date" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control as="textarea" rows={1} placeholder="Time" />
+                    <Form.Control type="textarea" rows={1} placeholder="Time" />
                 </Form.Group>
 
                 <Button variant="danger">Submit</Button>{' '}

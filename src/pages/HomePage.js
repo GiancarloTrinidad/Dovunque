@@ -17,7 +17,7 @@ const Home = () => {
         
         <div className="container-fluid home">
             <header className="text-center py-5 bg-danger text-white">
-                <h1>Welcome to Dovunque</h1>
+                <h1 style={{color: 'white'}}>Welcome to Dovunque</h1>
             </header>
             <main className="main-content text-center py-5">
                 <div className="container">

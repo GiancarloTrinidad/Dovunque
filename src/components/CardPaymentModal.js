@@ -28,7 +28,7 @@ function PaymentModal(props) {
         centered
     >
         <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">Credit Card</Modal.Title>
+            <Modal.Title className="fw-semibold" id="contained-modal-title-vcenter">Credit Card</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>

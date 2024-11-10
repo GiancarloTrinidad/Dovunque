@@ -29,9 +29,7 @@ const Menu = ({ addToCart }) => {
 
       {products.map(product => (
 
-        <MenuCard key={product._id} product={product} />
-
-              //addToCart={addToCart} 
+        <MenuCard key={product._id} product={product} addToCart={addToCart}  />
       ))}
 
     </div>
@@ -41,44 +39,6 @@ const Menu = ({ addToCart }) => {
 };
 
 // function Menu() {
-
-  // const Menu = ({ addToCart }) => {
-
-  //   const [products, setProducts] = useState([]);
-  
-  //   useEffect(() => {
-  
-  //     const fetchProducts = async () => {
-  
-  //       const response = await fetch('http://localhost:5000/api/products');
-  
-  //       const data = await response.json();
-  
-  //       setProducts(data);
-  
-  //     };
-  
-  //     fetchProducts();
-  
-  //   }, []);
-  
-  //   return (
-  
-  //     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
-  
-  //       {products.map(product => (
-  
-  //         <MenuCard key={product._id} product={product} />
-  
-  //               //addToCart={addToCart} 
-  //       ))}
-  
-  //     </div>
-  
-  //   );
-  
-  // };
-
 
   // // Sample Menu Data com
   // const menuItems = [

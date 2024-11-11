@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f7f3e9;
+    color: #333;
+}
+
+/* Menu Page Styles */
+.menu-page {
+    padding: 40px;
+    background-color: #f7f3e9;
+}
+
+h1 {
+    text-align: center;
+    color: #d9534f;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Menu Item Box Styling */
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: calc(33.333% - 40px); /* 3 items per row with margins */
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item h2 {
+    font-size: 1.8rem;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.menu-item .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c9302c;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #4cae4c;
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.order-summary h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.order-summary li {
+    margin: 10px 0;
+}
+
+.order-summary h3 {
+    font-size: 1.8rem;
+    color: #d9534f;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .menu-item {
+        width: calc(50% - 40px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .menu-item {
+        width: 100%; /* 1 item per row on mobile */
+    }
+
+    .menu-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+
+    .menu-item .price {
+        font-size: 1.3rem;
+    }
+
+    .order-summary h2, .order-summary h3 {
+        font-size: 1.5rem;
+    }
+}

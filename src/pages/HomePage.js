@@ -11,8 +11,8 @@ const Home = () => {
 
     const dishes = [
         { img: "../assets/alfredo.jpg", title: "Pasta Carbonara", description: "Creamy pasta with parmesan, eggs, and pancetta." },
-        { img: "", title: "Tiramisu", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone." },
-        { img: "", title: "Chianti Wine", description: "A glass of fine Chianti wine, perfect for pairing with any meal." }
+        { img: "../assets/calamari.jpg", title: "Tiramisu", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone." },
+        { img: "../assets/chez.jpg", title: "Chianti Wine", description: "A glass of fine Chianti wine, perfect for pairing with any meal." }
     ];
 
     const carouselItems = [

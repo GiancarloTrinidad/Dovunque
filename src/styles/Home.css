@@ -102,7 +102,56 @@ header {
     border: none;
 }
 
-.btn-primary:hover {
+/* Featured Dishes */
+.main-content .card {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.main-content .card:hover {
+    transform: scale(1.05);
+}
+
+.main-content .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.main-content .card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+    border-radius: 8px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.main-content .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.main-content .btn-primary {
+    background-color: #d9534f;
+    border: none;
+}
+
+.main-content .btn-primary:hover {
     background-color: #c9302c;
 }
 

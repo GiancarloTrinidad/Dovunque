@@ -31,7 +31,7 @@ function MainNavbar() {
                   <Nav.Link as = {Link} to="/payment">Payment</Nav.Link>
                   {/* <Nav.Link as = {Link} to="/register">Register</Nav.Link> */}
                   <Nav.Link as = {Link} to="/reservation">Reservation</Nav.Link>
-                  <Button variant="danger" as = {Link} to="/login">Login</Button>  
+                  <Button style={{ 'width':'5rem', 'border-radius': "50px" }} variant="danger" as = {Link} to="/login">Login</Button>  
                 </Nav>
               </Navbar.Collapse>
             </Offcanvas.Body>

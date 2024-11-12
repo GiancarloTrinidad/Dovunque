@@ -1,51 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import MenuCard from '../components/MenuCard.js';
 import '../styles/Menu.css';
 
-function Menu() {
-  // Sample Menu Data
-  const menuItems = [
-    { id: 1, name: 'Margherita Pizza', description: 'Classic pizza with fresh basil, mozzarella, and tomato sauce', price: 12.99 },
-    { id: 2, name: 'Spaghetti Carbonara', description: 'Spaghetti with pancetta, eggs, and Parmesan', price: 14.99 },
-    { id: 3, name: 'Lasagna', description: 'Layered pasta with meat sauce, bechamel, and cheese', price: 16.99 },
-    { id: 4, name: 'Tiramisu', description: 'Coffee-flavored Italian dessert', price: 6.99 },
-    { id: 5, name: 'Fettuccine Alfredo', description: 'Fettuccine pasta in a creamy Alfredo sauce', price: 15.99 },
-  ];
+const MenuPage = ({ addToCart, removeFromCart }) => {
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [error, setError] = useState(null);
 
-  const [order, setOrder] = useState([]);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch('http://localhost:5000/api/products');
+      const data = await response.json();
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
 
-  // Function to add an item to the order
-  const addToOrder = (item) => {
-    setOrder([...order, item]);
-  };
+  // Fetch cart data from the backend when the component mounts
+  useEffect(() => {
+    const fetchCart = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/cart');
 
-  // Function to calculate the total price of the order
-  const getTotalPrice = () => {
-    return order.reduce((total, item) => total + item.price, 0).toFixed(2);
-  };
+        if (!response.ok) {
+          throw new Error('Failed to fetch cart data');
+        }
+        const data = await response.json();
+        setCart(data); // Set the fetched cart data into state
 
-  // Function to "place the order"
-  const placeOrder = () => {
-    alert(`Thank you! Your order has been placed. Total: $${getTotalPrice()}`);
-    setOrder([]); // Reset the order after placing
-  };
+      } catch (error) {
+        console.error('Error fetching cart data:', error);
+        setError(error.message); // Set the error message
+      }
+    };
+    fetchCart();
+  }, []);
+
+  // Check if cart is an array
+  if (!Array.isArray(cart)) {
+    return <div>Error: Cart data is not valid.</div>;
+  }
+
+  // Calculate total price
+  const totalPrice = cart.reduce((acc, item) => acc + item.productId.price * item.quantity, 0);
 
   return (
-<<<<<<< Updated upstream
-    <div className="menu-page container">
-      <h1>Dovunque Menu</h1>
-      <div className="menu-list">
-        {menuItems.map(item => (
-          <div key={item.id} className="menu-item">
-            <h2>{item.name}</h2>
-            <p>{item.description}</p>
-            <p className="price">${item.price.toFixed(2)}</p>
-            <button onClick={() => addToOrder(item)} className="btn btn-primary">Add to Order</button>
-          </div>
-        ))}
-      </div>
-=======
     <>
-      <div className="menu-page">
+      {/* <div className="menu-page container"> */}
         <h1>Dovunque Menu</h1>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
             {products.map(product => (
@@ -66,29 +67,22 @@ function Menu() {
             </div>
           ))}
         </div> */}
->>>>>>> Stashed changes
 
-      <div className="order-summary">
-        <h2>Your Order</h2>
-        {order.length === 0 ? (
-          <p>No items in your order yet.</p>
-        ) : (
+        <div className="order-summary">
+          <h2>Your Order</h2>
+          {error && <p>Error: {error}</p>} {/* Display error message if any */}
+          
+          {cart.length === 0 ? (
+          <p>Cart is empty.</p>
+          ) : (
           <ul>
-            {order.map((item, index) => (
-              <li key={index}>
-                {item.name} - ${item.price.toFixed(2)}
+            {cart.map(item => (
+              <li key={item.productId._id}>
+                {item.productId.name} - ${item.productId.price} x {item.quantity}
+                <button onClick={() => removeFromCart(item.productId._id)}>Remove</button>
               </li>
             ))}
           </ul>
-<<<<<<< Updated upstream
-        )}
-        <h3>Total: ${getTotalPrice()}</h3>
-        {order.length > 0 && (
-          <button onClick={placeOrder} className="btn btn-success">Place Order</button>
-        )}
-      </div>
-    </div>
-=======
           )}
           <p>Total: ${totalPrice.toFixed(2)}</p> {/* Format total price to 2 decimal places */}
 
@@ -108,10 +102,9 @@ function Menu() {
             <button onClick={placeOrder} className="btn btn-success">Place Order</button>
           )} */}
         </div>
-      </div>
+      {/* </div> */}
     </>
->>>>>>> Stashed changes
   );
-}
+};
 
-export default Menu;
+export default MenuPage;

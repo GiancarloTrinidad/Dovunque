@@ -30,6 +30,7 @@ function Menu() {
   };
 
   return (
+<<<<<<< Updated upstream
     <div className="menu-page container">
       <h1>Dovunque Menu</h1>
       <div className="menu-list">
@@ -42,6 +43,30 @@ function Menu() {
           </div>
         ))}
       </div>
+=======
+    <>
+      <div className="menu-page">
+        <h1>Dovunque Menu</h1>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+            {products.map(product => (
+              <MenuCard key={product._id} product={product} addToCart={addToCart} />
+            ))}
+        </div>
+      
+    
+      {/* <div className="menu-page container">
+        <h1>Dovunque Menu</h1>
+        <div className="menu-list">
+          {menuItems.map((item) => (
+            <div key={item.id} className="menu-item">
+              <h2>{item.name}</h2>
+              <p>{item.description}</p>
+              <p className="price">Php {item.price.toFixed(2)}</p>
+              <button onClick={() => addToOrder(item)} className="btn btn-primary">Add to Order</button>
+            </div>
+          ))}
+        </div> */}
+>>>>>>> Stashed changes
 
       <div className="order-summary">
         <h2>Your Order</h2>
@@ -55,6 +80,7 @@ function Menu() {
               </li>
             ))}
           </ul>
+<<<<<<< Updated upstream
         )}
         <h3>Total: ${getTotalPrice()}</h3>
         {order.length > 0 && (
@@ -62,6 +88,29 @@ function Menu() {
         )}
       </div>
     </div>
+=======
+          )}
+          <p>Total: ${totalPrice.toFixed(2)}</p> {/* Format total price to 2 decimal places */}
+
+          {/* {order.length === 0 ? (
+            <p>No items in your order yet.</p>
+          ) : (
+            <ul>
+              {order.map((item, index) => (
+                <li key={index}>
+                  {item.name} - ${item.price.toFixed(2)}
+                </li>
+              ))}
+            </ul>
+          )}
+          <h3>Total: ${getTotalPrice()}</h3>
+          {order.length > 0 && (
+            <button onClick={placeOrder} className="btn btn-success">Place Order</button>
+          )} */}
+        </div>
+      </div>
+    </>
+>>>>>>> Stashed changes
   );
 }
 

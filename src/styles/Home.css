@@ -90,14 +90,14 @@ header {
 }
 
 /* Button Styling */
-.btn {
+.main-content .btn {
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
-.btn-primary {
+.main-content .btn-primary {
     background-color: #d9534f;
     border: none;
 }

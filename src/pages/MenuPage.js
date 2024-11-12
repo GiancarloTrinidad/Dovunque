@@ -46,7 +46,7 @@ const MenuPage = ({ addToCart, removeFromCart }) => {
 
   return (
     <>
-      {/* <div className="menu-page container"> */}
+      <div className="menu-page">
         <h1>Dovunque Menu</h1>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
             {products.map(product => (
@@ -102,7 +102,7 @@ const MenuPage = ({ addToCart, removeFromCart }) => {
             <button onClick={placeOrder} className="btn btn-success">Place Order</button>
           )} */}
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 };

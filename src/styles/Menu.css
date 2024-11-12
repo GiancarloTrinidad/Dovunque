@@ -2,73 +2,106 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif;
-    background-color: #f7f3e9;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #f4f4f9; /* Light grey background */
     color: #333;
 }
 
 /* Menu Page Styles */
 .menu-page {
-    padding: 40px;
-    background-color: #f7f3e9;
+    padding: 50px 20px;
+    background-color: #f4f4f9;
 }
 
 .menu-page h1 {
     text-align: center;
-    color: #d9534f;
+    color: #d9534f; /* Accent red */
     font-size: 3rem;
     margin-bottom: 40px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 /* Menu Item Box Styling */
 .menu-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px; /* Modern gap for better spacing */
 }
 
 .menu-item {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    width: calc(33.333% - 40px); /* 3 items per row with margins */
-    margin: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Slight lifting effect */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Larger shadow */
+    background-color: #f9f9f9; /* Subtle hover background change */
+}
+
+/* Image Styling */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    min-height: 200px; /* Sets a min height for consistency */
+    border-radius: 8px; /* Rounded corners on images */
+    object-fit: cover; /* Ensures images cover their container without distortion */
+    margin-bottom: 15px;
 }
 
 .menu-item h2 {
     font-size: 1.8rem;
-    color: #d9534f;
-    margin-bottom: 10px;
+    color: #d9534f; /* Accent color */
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 .menu-item p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #666;
     margin: 10px 0;
 }
 
 .menu-item .price {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: #333;
+    margin-top: 10px;
+}
+
+.menu-item-content {
+    flex-grow: 1; /* This will push the footer to the bottom */
+}
+
+.menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* Button Styling */
-.btn {
+.menu-item .btn {
     font-size: 1.1rem;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape for buttons */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary {
@@ -79,6 +112,7 @@ body {
 
 .btn-primary:hover {
     background-color: #c9302c;
+    transform: translateY(-2px); /* Slight hover animation */
 }
 
 .btn-success {
@@ -89,22 +123,27 @@ body {
 
 .btn-success:hover {
     background-color: #4cae4c;
+    transform: translateY(-2px);
 }
 
 /* Order Summary */
 .order-summary {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .order-summary h2 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .order-summary ul {
@@ -115,7 +154,7 @@ body {
 }
 
 .order-summary li {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .order-summary h3 {
@@ -126,7 +165,7 @@ body {
 /* Responsive Styling */
 @media (max-width: 1024px) {
     .menu-item {
-        width: calc(50% - 40px); /* 2 items per row on smaller screens */
+        width: calc(50% - 20px); /* 2 items per row on smaller screens */
     }
 }
 
@@ -140,7 +179,7 @@ body {
     }
 
     .menu-item h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .menu-item p {
@@ -151,7 +190,8 @@ body {
         font-size: 1.3rem;
     }
 
-    .order-summary h2, .order-summary h3 {
+    .order-summary h2,
+    .order-summary h3 {
         font-size: 1.5rem;
     }
 }

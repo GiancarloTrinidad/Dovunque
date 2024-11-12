@@ -23,7 +23,7 @@ function Payment() {
         <>
             <Container className="h-100">
                 <Row className='mt-5 pt-3'>   
-                    <h1 className='display-4'>Choose a payment method</h1>
+                    <h1 className='display-4 fw-bold'>Choose a payment method</h1>
                 </Row>
                 <Row xs={1} md={2} className="g-4 mh-0">                
                     

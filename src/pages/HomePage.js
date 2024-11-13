@@ -10,9 +10,9 @@ const Home = () => {
     ];
 
     const dishes = [
-        { img: "../assets/alfredo.jpg", title: "Pasta Carbonara", description: "Creamy pasta with parmesan, eggs, and pancetta." },
-        { img: "../assets/calamari.jpg", title: "Tiramisu", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone." },
-        { img: "../assets/chez.jpg", title: "Chianti Wine", description: "A glass of fine Chianti wine, perfect for pairing with any meal." }
+        { img: "https://img.taste.com.au/86bOXAkG/taste/2016/11/carbonara-sauce-28894-1.jpeg", title: "Classic Carbonara", description: "Creamy pasta with parmesan, eggs, and pancetta." },
+        { img: "https://mediterraneantaste.com/wp-content/uploads/2023/11/tiramisu-4583.jpg", title: "Tiramisu", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone." },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSZicnY70nC2PuqxZxgOWpaISg9e7y8FsAg&s", title: "Chianti Wine", description: "A glass of fine Chianti wine, perfect for pairing with any meal." }
     ];
 
     const carouselItems = [

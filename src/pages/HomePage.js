@@ -16,9 +16,9 @@ const Home = () => {
     ];
 
     const carouselItems = [
-        { img: "", caption: "Creamy Pasta" },
-        { img: "", caption: "Savory Tiramisu" },
-        { img: "", caption: "Fine Italian Wine" }
+        { img: "https://img.taste.com.au/86bOXAkG/taste/2016/11/carbonara-sauce-28894-1.jpeg", caption: "Creamy Pasta" },
+        { img: "https://mediterraneantaste.com/wp-content/uploads/2023/11/tiramisu-4583.jpg", caption: "Savory Tiramisu" },
+        { img: "https://www.shutterstock.com/image-photo/bottle-glass-red-wine-on-600nw-2355525061.jpg", caption: "Fine Italian Wine" }
     ];
 
     const reviews = [
@@ -32,7 +32,7 @@ const Home = () => {
                 <div className="overlay">
                     <div className="content-wrapper">
                         <header className="header-style text-center">
-                            <h1>Welcome to Dovunque</h1>
+                            <h1 style={{ 'color':'#fff'}}>Welcome to Dovunque</h1>
                         </header>
                         <main className="main-content text-center py-5 container-style">
                             <h2 className="heading mb-4">Authentic Italian Flavors, Warm Hospitality</h2>
@@ -65,9 +65,9 @@ const Home = () => {
                                     {carouselItems.map((item, index) => (
                                         <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
                                             <img src={item.img} className="d-block w-100" alt={item.caption} />
-                                            <div className="carousel-caption d-none d-md-block">
+                                            {/* <div className="carousel-caption d-none d-md-block">
                                                 <h5 className="carousel-caption-text">{item.caption}</h5>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     ))}
                                 </div>

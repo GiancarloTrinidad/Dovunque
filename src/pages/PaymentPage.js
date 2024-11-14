@@ -20,7 +20,7 @@ function Payment() {
     }
 
     return (
-        <>
+        <div className="bg-image">
             <Container className="h-100">
                 <Row className='mt-5 pt-3'>   
                     <h1 className='display-4 fw-bold'>Choose a payment method</h1>
@@ -120,7 +120,7 @@ function Payment() {
                 content={modalContent}
                 onHide={() => setCardModalShow(false)}   
             />
-        </>
+        </div>
     );
 }
 

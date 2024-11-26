@@ -11,6 +11,7 @@ import MainNavbar from './components/MainNavbar';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
+
 function App() {
   const [cart, setCart] = useState([]);
 

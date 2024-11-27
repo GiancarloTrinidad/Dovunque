@@ -8,8 +8,8 @@ router.post('/reserve', async (req, res) => {
 
     try {
         const newReservation = new Reservation({ reservename, phoneNumber, guestCount, reserveDate, reserveTime });
-        await newReserve.save();
-        res.status(201).json(newReserve);
+        await newReservation.save();
+        res.status(201).json(newReservation);
 
     } 
     catch (error) {

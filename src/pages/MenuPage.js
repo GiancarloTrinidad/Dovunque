@@ -69,6 +69,38 @@ const MenuPage = () => {
     setCart(data);
   };
 
+  const increaseQuantity = async (productId) => {
+    try {
+      const response = await fetch("http://localhost:5000/api/cart/increase", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId }),
+      });
+      if (!response.ok) throw new Error("Failed to increase quantity");
+  
+      const updatedCart = await response.json();
+      setCart(updatedCart);
+    } catch (error) {
+      console.error("Error increasing quantity:", error);
+    }
+  };
+  
+  const decreaseQuantity = async (productId) => {
+    try {
+      const response = await fetch("http://localhost:5000/api/cart/decrease", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId }),
+      });
+      if (!response.ok) throw new Error("Failed to decrease quantity");
+  
+      const updatedCart = await response.json();
+      setCart(updatedCart);
+    } catch (error) {
+      console.error("Error decreasing quantity:", error);
+    }
+  };
+
   // Calculate total price
   const totalPrice = cart.reduce((acc, item) => acc + item.productId.price * item.quantity, 0);
 
@@ -89,50 +121,34 @@ const MenuPage = () => {
           {cart.length === 0 ? (
             <p>Cart is empty.</p>
           ) : (
-            <>
+            <div>
               {cart.map((item) => (
-                <div style={{ 
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "10px",
-                  border: "1px solid #ccc",
-                  borderRadius: "5px",
-                  position: "relative",
-                  marginBottom: "10px"
-                }}
-                key={item.productId._id}>
+                <div className="order-item" key={item.productId._id}>
                   
-                  {/* Item Details */}
-                  <div style={{ textAlign:"left" }}>
-                    <h4 style={{ margin: "0 0 5px 0" }}>
-                      <strong>{item.productId.name}</strong>
-                    </h4>
-                    <p style={{ margin: "0", fontSize: "14px", color: "#666" }}>
-                      ₱{item.productId.price} x {item.quantity}
-                    </p>
+                  {/* Product Details */}
+                  <div className='product-info'>
+                    <h4><strong>{item.productId.name}</strong></h4>
+                    <p>₱{item.productId.price.toFixed(2)}</p>
                   </div>
 
-                  {/* Remove Button */}
-                  <button style={{
-                      position: "absolute",
-                      top: "0px",
-                      right: "0px",
-                      backgroundColor: "transparent",
-                      color: "#d9534f",
-                      border: "none",
-                      fontSize: "18px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => removeFromCart(item.productId._id)}>&times;</button>
+                  {/* Quantity buttons */}
+                  <div className="quantity-controls">
+                    <button onClick={() => decreaseQuantity(item.productId._id)}
+                       // Disable if quantity is 1
+                      disabled={item.quantity === 1}> -
+                    </button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => increaseQuantity(item.productId._id)}> + </button>
+                  </div>
 
                   {/* Total Price for Product */}
-                  <p style={{ margin: "0", fontWeight: "bold", fontSize: "16px", color: "#333" }}>
-                    ₱{(item.productId.price * item.quantity).toLocaleString()}
-                  </p>
+                  <p className="total-price">₱{(item.productId.price * item.quantity).toFixed(2)}</p>
+
+                  {/* Remove Button */}
+                  <button className="remove-button"onClick={() => removeFromCart(item.productId._id)}>&times;</button>
                 </div>
               ))}
-              </>
+              </div>
           )}
           <h5 className="mt-4"><strong>Total: ₱{totalPrice.toFixed(2)}</strong></h5>
 

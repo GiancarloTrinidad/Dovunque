@@ -1,0 +1,207 @@
+[{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85080"
+  },
+  "name": "Fried Mozarella",
+  "price": 350,
+  "description": "Breaded and Deep Fried Mozzarella Cheese",
+  "image": "https://www.allrecipes.com/thmb/ZiFhHliWVbS_T9hhw-Fc3GLJVNU=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/23596-fried-mozzarella-cheese-sticks-DDMFS-4x3-842a0eaebf6b435a8d3a8b04325e13eb.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85081"
+  },
+  "name": "Fried Calamari",
+  "price": 450,
+  "description": "Breaded and Deep Fried Squid",
+  "image": "https://www.allrecipes.com/thmb/mEx5LVYDAaD9pC_cxOF4zyVNSMQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8887907-8f140e0d82e24f4fb91556befd53e294.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85082"
+  },
+  "name": "Chicken Alfredo",
+  "price": 600,
+  "description": "Chicken Cutlet and Alfredo Sauce on Fettuccine Pasta",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUNb9ww27tn4-wd3wETIwyPBPGRCcIN7LJXg&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85083"
+  },
+  "name": "Fettuccine Alfredo",
+  "price": 500,
+  "description": "Classic Alfredo Sauce on Fettuccine Pasta",
+  "image": "https://assets.bonappetit.com/photos/57e2c3599f19b4610e6b79f6/4:3/w_3331,h_2498,c_limit/fettuccine-alfredo.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85084"
+  },
+  "name": "Shrimp Alfredo",
+  "price": 675,
+  "description": "Shrimp and Alfredo Sauce on Fettuccine Pasta",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrFWQbZo-5mtolKTi5DrgoXcyNLZ4k24RpxA&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85085"
+  },
+  "name": "Chicken Carbonara",
+  "price": 650,
+  "description": "Chicken Cutlet and Creamy Carbonara Sauce on Fettuccine Pasta",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTZ9VyxGyQXNOavREmskiWIlbWWKquaV4L6A&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85086"
+  },
+  "name": "Classic Carbonara",
+  "price": 550,
+  "description": "Creamy Carbonara Sauce on Fettuccine Pasta",
+  "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/2/7/1/FNM_030114-Spaghetti-Carbonara-Recipe-h_s4x3.jpg.rend.hgtvcom.616.462.suffix/1391877822709.webp"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85087"
+  },
+  "name": "Chicken Parmesan",
+  "price": 650,
+  "description": "Chicken Cutlet and Marinara Sauce on Fettuccine Pasta",
+  "image": "https://media.istockphoto.com/id/503203991/photo/homemade-italian-chicken-parmesan.jpg?s=612x612&w=0&k=20&c=T0eI0IqYYWJYvihT9itVeng0MMubNxCpz133VC_qhI0="
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85088"
+  },
+  "name": "Chicken Scampi",
+  "price": 650,
+  "description": "Sliced Chicken Cutlet with garlic butter and white wine reduction on Fettuccine Pasta",
+  "image": "https://hips.hearstapps.com/hmg-prod/images/delish-211109-olive-garden-chicken-scampi-006-ab-web-1637552475.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85089"
+  },
+  "name": "Shrimp Scampi",
+  "price": 700,
+  "description": "Shrimp with garlic butter and white wine reduction on Fettuccine Pasta smooth latte with milk",
+  "image": "https://images.getrecipekit.com/20220321154913-shrimp_scampi_new_web_v4.jpg?aspect_ratio=4:3&quality=90&"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508a"
+  },
+  "name": "Lasagna",
+  "price": 600,
+  "description": "with Meat Sauce and Ricotta Cheese",
+  "image": "https://prestogourmet.ca/images/virtuemart/product/Lasagna%20Bolognese.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508b"
+  },
+  "name": "Margherita Pizza",
+  "price": 800,
+  "description": "Basil, Tomato, and Mozzarella",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqlhGejx6YespAiEjstpcCcKHWzr63_IfuQ&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508c"
+  },
+  "name": "Chicken Alfredo Pizza",
+  "price": 850,
+  "description": "Sliced Chicken cutlet with Alfredo Sauce",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMJjGh0PGORQonNBIIbo6FH6X9WceIbNi0w&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508d"
+  },
+  "name": "Four Cheese Pizza",
+  "price": 800,
+  "description": "Mozzarella, Cheddar, Blue Cheese, and Monterey Jack",
+  "image": "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508e"
+  },
+  "name": "Meat Lovers Pizza",
+  "price": 850,
+  "description": "Ground Beef, Salami, Sausage, Pan-Seared Chicken",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj6wI9HeRqjxIgkswe2b7aIAPWxIpxU9Vz6w&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e8508f"
+  },
+  "name": "Tiramisu",
+  "price": 280,
+  "description": "Ladyfinger Pastry with Coffee and Cream",
+  "image": "https://feelingfoodish.com/wp-content/uploads/2024/01/Classic-tiramisu-10.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85090"
+  },
+  "name": "Cheesecake",
+  "price": 300,
+  "description": "New York Style, Baked with Cream Cheese",
+  "image": "https://assets.epicurious.com/photos/62bdc36d9de40a39de6bd598/4:3/w_5482,h_4112,c_limit/Cheesecake_RECIPE_062922_36317.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85091"
+  },
+  "name": "Espresso",
+  "price": 200,
+  "description": "Bold. Strong. Awooga!",
+  "image": "https://ruste.gr/wp-content/uploads/2024/01/various-espresso-coffees-top-view-4-3.jpg.webp"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85092"
+  },
+  "name": "Cappuccino",
+  "price": 250,
+  "description": "Espresso with Steamed Milk",
+  "image": "https://134258802.cdn6.editmysite.com/uploads/1/3/4/2/134258802/s464236176240428820_p15_i2_w1500.jpeg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85093"
+  },
+  "name": "Cafe latte",
+  "price": 300,
+  "description": "Espresso with Milk",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwvr19bRLiuObxN5K2ikJgOoAJToflhs9fw&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85094"
+  },
+  "name": "Macchiato",
+  "price": 225,
+  "description": "Espresso with splash of milk",
+  "image": "https://www.thespruceeats.com/thmb/HXaU0FwlEoZ6d5MoPVzGCXKx41k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/85153452-56a176765f9b58b7d0bf84dd.jpg"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85095"
+  },
+  "name": "Affogato",
+  "price": 380,
+  "description": "Espresso poured on top of ice cream",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-RkIf4D6JIG8FEquXige2dQNFR6nVAe6uUQ&s"
+},
+{
+  "_id": {
+    "$oid": "67306dfa743c30b262e85096"
+  },
+  "name": "24K Gold Affogato",
+  "price": 24000,
+  "description": "Affogato with 24k Gold Leaf",
+  "image": "https://img.freepik.com/premium-photo/affogato-with-touch-gold-leaf-affogato-food-image-photography_1020697-546953.jpg"
+}]

@@ -21,7 +21,7 @@ function Reservation () {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:5000/api/reserve", {
+            const response = await fetch("http://localhost:5000/api/reservations/reserve", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ reservename, phoneNumber, guestCount, reserveDate, reserveTime }),
@@ -67,7 +67,7 @@ function Reservation () {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="number" 
+                                        <Form.Control required type="text" 
                                                       placeholder="Phone Number"
                                                       value={phoneNumber}
                                                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -78,7 +78,7 @@ function Reservation () {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="number" 
+                                        <Form.Control required type="text" 
                                                         placeholder="Number of Guests"
                                                         value={guestCount}
                                                         onChange={(e) => setGuestCount(e.target.value)}/>
@@ -88,7 +88,7 @@ function Reservation () {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="date" 
+                                        <Form.Control required type="text" 
                                                     placeholder="Date"
                                                     value={reserveDate}
                                                     onChange={(e) => setReserveDate(e.target.value)}/>
@@ -98,7 +98,7 @@ function Reservation () {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="time"
+                                        <Form.Control required type="text"
                                                     placeholder="Time"
                                                     value={reserveTime}
                                                     onChange={(e) => setReserveTime(e.target.value)}/>

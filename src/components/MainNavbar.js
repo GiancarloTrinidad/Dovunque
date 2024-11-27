@@ -33,7 +33,7 @@ function MainNavbar() {
                   <Nav.Link as = {Link} to="/reservation">Reservation</Nav.Link>
                   <Button
                     className=""
-                    style={{ 'width':'5rem', 'border-radius': '15px'}} 
+                    style={{ 'width':'5rem', 'border-radius': '50px'}} 
                     variant="danger" as = {Link} to="/login">Login
                   </Button>  
                 </Nav>

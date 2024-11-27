@@ -9,17 +9,38 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 function Reservation () {
+    const [reservename, setReserveName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [guestCount, setGuestCount] = useState('');
+    const [reserveDate, setReserveDate] = useState('');
+    const [reserveTime, setReserveTime] = useState('');
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
-    const [validated, setValidated] = useState(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    const handleSubmit = (event) => {
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-  
-      setValidated(true);
+        try {
+            const response = await fetch("http://localhost:5000/api/reserve", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ reservename, phoneNumber, guestCount, reserveDate, reserveTime }),
+            });
+
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error);
+
+            setSuccess("Registration successful! You can now log in.");
+            setError('');
+            setReserveName('');
+            setPhoneNumber('');
+            setGuestCount('');
+            setReserveDate('');
+            setReserveTime('');
+        } catch (err) {
+            setError(err.message);
+            setSuccess('');
+         }
     };
 
     return (
@@ -33,37 +54,54 @@ function Reservation () {
                             <Card.Body>
                                 <h3 className="text-center mt-1 mb-4 fw-bold">          Make a Reservation</h3> 
 
-                                <Form noValidate validated={validated} onSubmit={handleSubmit} className='px-4'>      
+                                <Form onSubmit={handleSubmit} className='px-4'>      {/*noValidate validated={validated}*/}
                                     <Form.Group className="mb-3" controlId="formUsername">
-                                        <Form.Control required type="text" placeholder="Name"/>
+                                        <Form.Control required type="text" 
+                                                    placeholder="Name"
+                                                    value={reservename}
+                                                    onChange={(e) => setReserveName(e.target.value)} 
+                                                    />
                                         <Form.Control.Feedback type="invalid" className='fs-6'> 
                                             Please enter a name.
                                         </Form.Control.Feedback>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="text" placeholder="Phone Number"/>
+                                        <Form.Control required type="number" 
+                                                      placeholder="Phone Number"
+                                                      value={phoneNumber}
+                                                    onChange={(e) => setPhoneNumber(e.target.value)}
+                                                    />
                                         <Form.Control.Feedback type="invalid" className='fs-6'> 
                                             Please enter a phone number.
                                         </Form.Control.Feedback>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="number" placeholder="Number of Guests"/>
+                                        <Form.Control required type="number" 
+                                                        placeholder="Number of Guests"
+                                                        value={guestCount}
+                                                        onChange={(e) => setGuestCount(e.target.value)}/>
                                         <Form.Control.Feedback type="invalid" className='fs-6'> 
                                             Please enter the number of guests.
                                         </Form.Control.Feedback>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="date" placeholder="Date"/>
+                                        <Form.Control required type="date" 
+                                                    placeholder="Date"
+                                                    value={reserveDate}
+                                                    onChange={(e) => setReserveDate(e.target.value)}/>
                                         <Form.Control.Feedback type="invalid" className='fs-6'> 
                                             Please enter a date.
                                         </Form.Control.Feedback>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Control required type="time" placeholder="Time"/>
+                                        <Form.Control required type="time"
+                                                    placeholder="Time"
+                                                    value={reserveTime}
+                                                    onChange={(e) => setReserveTime(e.target.value)}/>
                                         <Form.Control.Feedback type="invalid" className='fs-6'> 
                                             Please enter a time.
                                         </Form.Control.Feedback>
@@ -86,33 +124,6 @@ function Reservation () {
                 </Row>
             </Container>
 
-    {/* <Card style={{ width: '20rem' ,backgroundColor: '#5CA921', color: 'white'}}>
-         Make a Reservation
-            <Form style={{padding: '20px'}}>
-
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control type="textarea" rows={1} placeholder="Name" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control type="textarea" rows={1} placeholder="Phone Number" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control type="textarea" rows={1} placeholder="Number of Guests" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control type="textarea" rows={1} placeholder="Date" />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Control type="textarea" rows={1} placeholder="Time" />
-                </Form.Group>
-
-                <Button variant="danger">Submit</Button>{' '}
-            </Form>
-        </Card> */}
         </div>
 
       );
